@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<body>
+    <header>
+        <img style="padding-top:75px;" src="./media/todo-logo.png" alt="To-do-logo">
+        <div id="search-filter">
+            <div id="filter-container">
+                <label for="priority-filter">Filter by Priority:</label>
+                <select id="priority-filter" onchange="filterTasks()">
+                    <option value="all">All</option>
+                    <option value="H">High</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Low</option>
+                </select>
+            </div>
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="Search tasks">
+                <button onclick="searchTasks()">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="container">
+            <section id="input">
+                <input id="task-input" type="text" placeholder="Enter Your To-do List Task ">
+                <input type="date" id="dueDate">
+                <div id="add-button" onclick="addTask()">
+                    <span>Add</span>
+                    <img src="./media/plus.png" alt="add-symbol">
+                </div>
+            </section>
+    
+            <section id="display">
+                <section class="display-sections" id="tasks">
+                    <div class="display-items">
+                        <p  class="display-text">To-do list</p>
+                        <input id="task-count" type="text" value="0">
+                    </div>
+                    <div class="display-items">
+                        <p class="high-priority">High Priority</p>
+                        <input type="text" value="0">
+                    </div>
+                </section>
+
+                <section id="task-container">
+
+                </section>
+
+                <section class="display-sections" id="started">
+                    <div class="display-items">
+                        <p  class="display-text">Started</p>
+                        <input id="started-count" type="text" value="0">
+                    </div>
+                    <div class="display-items">
+                        <p class="high-priority">High Priority</p>
+                        <input type="text" value="0">
+                    </div>
+                </section>
+
+                <section id="started-container">
+
+                </section>
+
+                <section class="display-sections" id="completed">
+                    <div class="display-items">
+                        <p  class="display-text">Completed</p>
+                        <input id="completed-count" type="text" value="0">
+                    </div>
+                    <div class="display-items">
+                        <p class="high-priority">High Priority</p>
+                        <input type="text" value="0">
+                    </div>
+                </section>
+
+                <section id="completed-container">
+
+                </section>
+
+            </section>
+        </div>
+    </main>
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>
